@@ -15,10 +15,10 @@ export default async function hendler(req, res) {
             }
         );
 
-        const geminiTex = geminiRes.data.candidates[0].content.part[0].text;
+        const geminiTex = geminiRes;
 
         res.status(200).json({ response : geminiTex })
     } catch (err) {
         res.status(500).json({ err : "gagal terhubung" })
     }
-}
+}   
